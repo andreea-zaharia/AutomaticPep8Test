@@ -1,0 +1,150 @@
+Ensure that "python 3" is installed on your computer.
+sudo apt-get install python3
+
+[DEPENDENCIES]
+------------------------------INSTALLATION INSTRUCTIONS--------------------------------
+Dependencies to be installed - 
+
+pip install requests
+
+
+If pip3 is not installed - 
+
+sudo apt-get install python3-setuptools
+sudo easy_install3 pip
+sudo mv /usr/local/bin/pip /usr/local/bin/pip-3
+
+sudo pip3 install -U selenium
+pip install beautifulsoup4
+
+
+Disclaimer- Use it at your own risk. 
+Note - For Amazon,Netflix subtitle downloads - "Stable release of Google Chrome is required."
+
+
+For Amazon, Netflix -
+Make sure you already have Google Chrome installed.
+Then download and extract the contents of - http://chromedriver.storage.googleapis.com/index.html?path=2.25/
+You will get a file named "chromedriver"
+Then go to the directory where "chromedriver" is present and execute the following command -
+
+sudo mv -t /usr/local/bin/ chromedriver
+(Move the chromedriver file into /usr/local/bin)
+
+
+
+
+
+
+
+
+[HULU]
+-----------------------Instructions for Hulu ---------------
+
+1) Ensure that SubtitleExtractor.py executable. (Command for making it executable - chmod +x SubtitleExtractor.py)
+2) Run the python file - ./SubtitleExtractor.py
+3) Paste the desired URL (from Hulu website) for which Subtitles have to extracted and press "ENTER".
+4) If multiple languages are avaiable you will be prompted to choose the desired language option.
+5) Subtitles will be downloaded.
+
+
+
+
+[YouTube]
+-----------------------Instructions for YouTube ---------------
+
+1) Ensure that SubtitleExtractor.py executable. (Command for making it executable - chmod +x SubtitleExtractor.py)
+2) Run the python file - ./SubtitleExtractor.py
+3) Paste the desired YouTube URL from which Subtitles have to extracted and press "ENTER".
+4) If multiple languages are avaiable you will be prompted to choose the desired language option.
+5) Subtitles will be downloaded.
+
+
+[AMAZON]
+-----------------------Instructions for AMAZON ---------------
+
+Note - Amazon requires that you have a valid subscription for that particular video to download the subtitles
+
+These instructions need to followed whenever you want to "change login details". - 
+1) Ensure that SubtitleExtractor.py and "setup.py" are executable. 
+(Command for making them executable - chmod +x SubtitleExtractor.py setup.py)
+2) Open the file "userconfig.ini".
+3) Type in your new Amazon Username and Amazon Password in the respective fields.
+4) Save the file and exit.
+5) Now run the file setup.py -  ./setup.py
+6) If the setup is succssfully done, you will see no errors.
+
+These instructions need to be followed when you are done with the one time setup file. From now on, you can just follow these instructions unless you want to change your login details ~
+
+
+1) Run the python file - ./SubtitleExtractor.py
+2) Paste the desired Amazon URL from which Subtitles have to be extracted and press "ENTER".
+3) If it is a movie, Subtitles will be downloaded normally.
+4) If it is a TV Series, all the episodes of that season will be downloaded in a new folder with the corressponding title.
+
+
+
+[BBC]
+-----------------------Instructions for BBC ---------------
+Note:Please check that you are able to stream the video without any geo-location errors.
+
+
+1) Ensure that SubtitleExtractor.py executable. (Command for making it executable - chmod +x SubtitleExtractor.py)
+2) Run the python file - ./SubtitleExtractor.py
+3) Paste the desired URL (from BBC website) for which Subtitles have to extracted and press "ENTER".
+4) Subtitles will be downloaded.
+
+
+
+
+[Crunchyroll]
+-----------------------Instructions for Crunchyroll ---------------
+
+
+1) Ensure that SubtitleExtractor.py executable. (Command for making it executable - chmod +x SubtitleExtractor.py)
+2) Run the python file - ./SubtitleExtractor.py
+3) Paste the desired URL (from Crunchyroll website) for which Subtitles have to extracted and press "ENTER".
+4) You will be asked to choose the language in which the subtitles have to be downloaded based on the availability. Enter 
+  the corresponding number. 
+5) Subtitles will be downloaded in the chosen language.
+
+
+Please report any errors on GitHub along with the error message for support.
+
+
+[Netflix]
+-----------------------Instructions for Netflix  ---------------
+Note:Please check that you are able to stream the video without any geo-location errors.
+
+
+1) Ensure that SubtitleExtractor.py executable. (Command for making it executable - chmod +x SubtitleExtractor.py)
+2) Open the file "userconfig.ini".
+3) Type in your new Netflix Username and Netflix Password in the respective fields.
+4) Save and exit.
+5) Run the python file - ./SubtitleExtractor.py
+6) Paste the desired URL of the video (from Netflix website) for which Subtitles have to extracted and press "ENTER".
+4) Subtitles will be downloaded.
+
+
+[FOX]
+-----------------------Instructions for FOX ---------------
+Note:Please check that you are able to stream the video without any geo-location errors.
+
+
+1) Ensure that SubtitleExtractor.py executable. (Command for making it executable - chmod +x SubtitleExtractor.py)
+2) Run the python file - ./SubtitleExtractor.py
+3) Paste the desired URL (from FOX website) for which Subtitles have to extracted and press "ENTER".
+4) Subtitles will be downloaded.
+
+
+[CRACKLE]
+-----------------------Instructions for Crackle ---------------
+Note:
+1) Please check that you are able to stream the video without any geo-location errors.
+2) After clicking on a TV show ensure that the URL contains some integer ID in it. Or else, click again on the episode from the playlist below to obtain the desired URL.
+
+
+1) Ensure that SubtitleExtractor.py executable. (Command for making it executable - chmod +x SubtitleExtractor.py)
+2) Run the python file - ./SubtitleExtractor.py
+3) Paste the desired URL (from Crackle website) for which Subtitles have to extracted and press "ENTER".
+4) Subtitles will be downloaded.
