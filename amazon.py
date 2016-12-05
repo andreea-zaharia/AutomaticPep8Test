@@ -13,6 +13,17 @@ from Amazon_XmlToSrt import toSrt
 class amazonExtractor(object):
 
     """docstring for amazonExtractor"""
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     def __init__(self, url, testMode):
 
@@ -47,81 +58,81 @@ class amazonExtractor(object):
         }
         pass
 
-    def getSubtitles(self):
-        """
-        The main function which uses helper functions to get the subtitles
-        """
+            def getSubtitles(self):
+                """
+                The main function which uses helper functions to get the subtitles
+                """
 
-        self.createSoupObject()
-        self.getcustomerID()
-        self.getToken()
-        self.getTitle()
+                self.createSoupObject()
+                self.getcustomerID()
+                self.getToken()
+                self.getTitle()
 
-        if self.debug:
-            print(self.title)
+                if self.debug:
+                    print(self.title)
 
-        self.getVideoType()
-        if self.debug:
-            print(self.videoType)
+                self.getVideoType()
+                if self.debug:
+                    print(self.videoType)
 
-        if self.videoType == "movie":
+                if self.videoType == "movie":
 
-            self.getAsinID1()  # Method-1
-            if self.debug:
-                print(self.parametersDict['asin'])
+                    self.getAsinID1()  # Method-1
+                    if self.debug:
+                        print(self.parametersDict['asin'])
 
-            returnValue = self.standardFunctionCalls()
-            if returnValue != 1:
-                self.videoType = "tv"
-
-        if self.videoType != "movie":
-
-            self.getAsinID2()
-            if self.debug:
-                print(self.asinList)
-
-            folderPath = "./"
-            directoryName = folderPath + self.title
-            try:
-                os.mkdir(directoryName)
-            except:
-                print("Directory exists")
-                pass
-
-            self.title = directoryName + "/" + self.title
-            episodeNum = 1
-            for asins in self.asinList:
-                self.parametersDict['asin'] = asins
-                currentTitle = self.title
-
-                self.title += str(episodeNum)
-                try:
                     returnValue = self.standardFunctionCalls()
-                except:
-                    pass
-                self.title = currentTitle
-                episodeNum += 1
-            # returnValue = 0
-        # self.getSubtitlesContainer()
-        # if self.debug:
-        # 	print(self.subtitleURLContainer)
+                    if returnValue != 1:
+                        self.videoType = "tv"
 
-        # SubtitlesURL = self.getSubtitleURL()
-        # if self.debug:
-        #  	print(SubtitlesURL)
+                if self.videoType != "movie":
 
-        # if not SubtitlesURL:
-        # 	print("Unable to fetch the subtitles. No subtitles present.")
-        # 	self.deleteUnnecessaryfiles()
-        # 	return 0
+                    self.getAsinID2()
+                    if self.debug:
+                        print(self.asinList)
 
-        # returnValue = self.downloadDfxpTranscript(SubtitlesURL)
+                    folderPath = "./"
+                    directoryName = folderPath + self.title
+                    try:
+                        os.mkdir(directoryName)
+                    except:
+                        print("Directory exists")
+                        pass
 
-        # self.convertDfxpToSrt()
+                    self.title = directoryName + "/" + self.title
+                    episodeNum = 1
+                    for asins in self.asinList:
+                        self.parametersDict['asin'] = asins
+                        currentTitle = self.title
 
-        # self.deleteUnnecessaryfiles()
+                        self.title += str(episodeNum)
+                        try:
+                            returnValue = self.standardFunctionCalls()
+                        except:
+                            pass
+                        self.title = currentTitle
+                        episodeNum += 1
+                    # returnValue = 0
+                # self.getSubtitlesContainer()
+                # if self.debug:
+                # 	print(self.subtitleURLContainer)
 
-        return returnValue
+                # SubtitlesURL = self.getSubtitleURL()
+                # if self.debug:
+                #  	print(SubtitlesURL)
+
+                # if not SubtitlesURL:
+                # 	print("Unable to fetch the subtitles. No subtitles present.")
+                # 	self.deleteUnnecessaryfiles()
+                # 	return 0
+
+                # returnValue = self.downloadDfxpTranscript(SubtitlesURL)
+
+                # self.convertDfxpToSrt()
+
+                # self.deleteUnnecessaryfiles()
+
+                return returnValue
 
     def createSoupObject(self):
 
