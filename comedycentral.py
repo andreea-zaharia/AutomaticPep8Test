@@ -6,24 +6,26 @@ import json
 
 
 class comedycentralExtractor(object):
+    
+    
 
-    """docstring for comedycentralExtractor"""
+        """docstring for comedycentralExtractor"""
 
-    def __init__(self, url, testMode):
+        def __init__(self, url, testMode):
 
-        print("Detected Comedy Central\nProcessing....\n")
-        self.loginRequired = False
-        self.urlName = url
-        self.debug = True
-        self.testMode = testMode
-        self.requestsFileName = "iDoNotExistDefinitelyOnThisComputerFolder.html"
-        self.showId = ""
-        self.showName = ""
-        self.videoGuid = ""
+            print("Detected Comedy Central\nProcessing....\n")
+            self.loginRequired = False
+            self.urlName = url
+            self.debug = True
+            self.testMode = testMode
+            self.requestsFileName = "iDoNotExistDefinitelyOnThisComputerFolder.html"
+            self.showId = ""
+            self.showName = ""
+            self.videoGuid = ""
 
-        self.subtitleServer = "http://static-media.fox.com/cc/"
-        self.fileExtension = [".srt", ".dfxp"]
-        pass
+            self.subtitleServer = "http://static-media.fox.com/cc/"
+            self.fileExtension = [".srt", ".dfxp"]
+            pass
 
     def getSubtitles(self):
         """
