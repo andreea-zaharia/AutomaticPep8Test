@@ -5,9 +5,6 @@
     from random import randint
 
 
-
-
-
 class huluExtractor(object):
 
     """docstring for huluExtractor"""
