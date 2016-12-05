@@ -1,8 +1,11 @@
-import os
-import re
-import requests
-from bs4 import BeautifulSoup
-from random import randint
+    import os
+    import re
+    import requests
+    from bs4 import BeautifulSoup
+    from random import randint
+
+
+
 
 
 class huluExtractor(object):
