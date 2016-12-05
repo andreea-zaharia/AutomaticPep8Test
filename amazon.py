@@ -13,17 +13,6 @@ from Amazon_XmlToSrt import toSrt
 class amazonExtractor(object):
 
     """docstring for amazonExtractor"""
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     def __init__(self, url, testMode):
 
