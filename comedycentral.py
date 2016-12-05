@@ -6,8 +6,6 @@ import json
 
 
 class comedycentralExtractor(object):
-    
-    
 
         """docstring for comedycentralExtractor"""
 
